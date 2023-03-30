@@ -10,5 +10,32 @@ html, body {
     height: 100%;
     overflow: hidden;
     font-family: 'Proza Libre', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+#images-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em;
+}
+
+canvas {
+    width: 500px;
+    height: 500px;
+    background-color: black;
+}
+
+#submit-button {
+    width: 120px;
+    aspect-ratio: 3;
+    background-color: rgb(211, 66, 66);
+    color: white;
+    padding: 0px;
+    border: none;
+    border-radius: 50px;
+}

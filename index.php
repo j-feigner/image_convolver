@@ -18,6 +18,7 @@
                 <canvas id="original-image"></canvas>
                 <canvas id="convolved-image"></canvas>
             </div>
+            <button id="submit-button">Apply Kernel</button>
         </div>
         <script src="./js/script.js"></script>
     </body>
