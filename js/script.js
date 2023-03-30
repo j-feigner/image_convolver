@@ -3,12 +3,15 @@ window.onload = main;
 function main() {
     var originalCanvas = document.querySelector("#original-image");
     var octx = originalCanvas.getContext("2d");
-    setCanvasBitmap(originalCanvas, 200, 200);
+    setCanvasBitmap(originalCanvas);
 
-    var image = new Image(200, 200);
-    image.src="./images/sample_200x200.png";
+    var image = new Image(4, 4);
+    image.src="./images/color_sample.png";
     image.onload = () => {
-        octx.drawImage(image, 0, 0);
+        octx.imageSmoothingEnabled = false;
+        octx.drawImage(image, 0, 0, originalCanvas.width, originalCanvas.height);
+        var data = octx.getImageData(0, 0);
+        var stop = 0;
     }
 }
 
